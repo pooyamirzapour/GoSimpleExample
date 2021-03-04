@@ -12,4 +12,6 @@ func main() {
 	for _, c := range d2 {
 		fmt.Println(c)
 	}
+
+	fmt.Println(card.toString())
 }
