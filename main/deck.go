@@ -1,6 +1,9 @@
 package main
 
-import "strings"
+import (
+	"io/ioutil"
+	"strings"
+)
 
 type deck []string
 
@@ -14,4 +17,8 @@ func deal(d deck, size int32) (deck, deck) {
 
 func (d deck) toString() string {
 	return strings.Join(d, ",")
+}
+
+func (d deck) saveToFile(fileName string) error {
+	return ioutil.WriteFile(fileName, []byte(d.toString()), 0666)
 }

@@ -14,4 +14,6 @@ func main() {
 	}
 
 	fmt.Println(card.toString())
+
+	card.saveToFile("myFile")
 }
