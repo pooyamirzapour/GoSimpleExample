@@ -16,4 +16,8 @@ func main() {
 	fmt.Println(card.toString())
 
 	card.saveToFile("myFile")
+
+	d := newDeckFromFile("myFile")
+	fmt.Println(d)
+
 }
